@@ -1,0 +1,42 @@
+{
+  "name": "iphone17pro-teardown",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Interactive, fully procedural 3D teardown / exploded-view simulator of an iPhone 17 Pro-style smartphone (educational approximation, not Apple CAD).",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "node scripts/e2e.mjs",
+    "screenshots": "node scripts/e2e.mjs --screenshots-only",
+    "docs": "vite-node scripts/gen-docs.ts",
+    "verify": "npm run typecheck && npm test && npm run e2e"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "gsap": "^3.15.1",
+    "postprocessing": "^6.39.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0",
+    "zustand": "^4.5.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.33",
+    "puppeteer-core": "^24.43.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}
